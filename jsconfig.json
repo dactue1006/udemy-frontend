@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": {
+      "Services/*": ["./src/services/*"],
+      "Util/*": ["./src/services/util/*"],
+      "Components/*": ["./src/components/*"],
+      "Redux/*": ["./src/redux/*"],
+      "Assets/*": ["./src/assets/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
