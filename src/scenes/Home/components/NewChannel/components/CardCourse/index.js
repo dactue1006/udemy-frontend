@@ -29,7 +29,7 @@ class RecipeReviewCard extends React.Component {
             {this.props.author}
           </Typography>
           <div style={{marginBottom: 10}}>
-            <Rating defaultRating={4} maxRating={5} disabled icon='star' size='mini' />
+            <Rating defaultRating={4.8} maxRating={5} disabled icon='star' size='mini' />
             <Typography style={{display: 'inline'}}>{this.props.rating} ({this.props.ratingNumber})</Typography>
           </div>
           <Typography style={{textAlign: 'right'}}>

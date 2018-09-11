@@ -1,35 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-//import styles from './styles';
+import styles from './styles';
 import Divider from '@material-ui/core/Divider';
 import Logo from '../AppBar/components/logo/index';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
 
 
-const styles = (theme)=>({
-  footer: {
-    padding: 20,
-    display:'block',
 
-  },
-  copyright: {
-    display: 'table-cell',
-    verticalAlign: 'middle',
-    paddingLeft: 20,
-  },
-  list: {
-    display: 'table-cell',
-    verticalAlign: 'middle',
-    paddingLeft: 200,
-    width: '50%',
-  },
-  listItem: {
-    display: 'inline-block',
-    paddingLeft: 15,
-  }
-});
 
 function Footer(props) {
   const { classes } = props;

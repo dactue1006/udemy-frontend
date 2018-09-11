@@ -1,4 +1,4 @@
-export default theme => ({
+export default () => ({
   bg: {
     backgroundColor: 'white',
     color: '#505763',

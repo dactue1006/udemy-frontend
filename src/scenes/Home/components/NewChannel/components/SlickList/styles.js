@@ -1,4 +1,4 @@
-export default theme=>({
+export default ()=>({
   root: {
     marginTop: 30,
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-//import styles from './styles';
+import styles from './styles';
 import Typography from '@material-ui/core/Typography';
 import { 
   FaComment, FaSun, FaAudioDescription, 
@@ -10,37 +10,7 @@ import {
 } from 'react-icons/fa';
 import Grid from '@material-ui/core/Grid';
 
-const styles = (theme) => ({
-  root: {
-    paddingRight: 30,
-    margin: '30px 0 30px 0',
-  },
-  rootCategories: {
-    width: 'auto',
-    borderRadius: 2,
-    padding: theme.spacing.unit * 2,
-    backgroundColor: 'white',
-    boxShadow: '0px 0px 2px 0px rgba(0,0,0,0.75)',
-    '&:hover': {
-      boxShadow: '0px 0px 4px 0px rgba(0,0,0,0.75)',
-      cursor: 'pointer',
-    }
-  },
-  icon: {
-    fontSize: '32px',
-    display: 'inline-block',
-    height: '100%',
-    verticalAlign: 'middle',
-  },
-  desription: {
-    height: '32px',
-    lineHeight: '32px',
-    display: 'inline-block',
-    width: '80%',
-    paddingLeft: 20,
-    color: '#14171c',
-  }
-});
+
 
 class TopCategories extends React.Component{
   render(){

@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
-import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import { Button } from '@material-ui/core';
 import validate from './validate';
 import styles from './styles';
 import TextField from '@material-ui/core/TextField';
 import Checkbox from '@material-ui/core/Checkbox';
-import Typography from '@material-ui/core/Typography';
-
 
 
 class SignUp extends Component {
