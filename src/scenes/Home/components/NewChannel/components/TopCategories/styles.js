@@ -19,6 +19,7 @@ export default (theme) => ({
     display: 'inline-block',
     height: '100%',
     verticalAlign: 'middle',
+    color: '#14171c',
   },
   desription: {
     height: '32px',
@@ -27,5 +28,6 @@ export default (theme) => ({
     width: '80%',
     paddingLeft: 20,
     color: '#14171c',
+    fontWeight: 400,
   }
 });
