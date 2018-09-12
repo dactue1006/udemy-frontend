@@ -15,12 +15,8 @@ import { Link } from 'react-router-dom';
 
 function getModalStyle() {
   return {
-    position: 'fixed',
+    marginTop: '3%',
     borderRadius: 5,
-    border: 'none',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
   };
 }
 
@@ -49,6 +45,7 @@ class SimpleModal extends React.Component {
       <div>
         <Button className={classes.buttonLogin}onClick={this.handleOpen}>Log In</Button>
         <Modal
+          className={classes.root}
           aria-labelledby="simple-modal-title"
           aria-describedby="simple-modal-description"
           open={this.state.open}

@@ -12,13 +12,12 @@ export default theme =>({
   },
   bootstrapInput: {
     backgroundColor: '#eee',
-    border: '1px solid white',
-    borderRight: '1px solid #eee',
+    border: '1px solid #eee',
+    borderRight: 'none',
     fontSize: 14,
     padding: '12px',
     width: 'calc(100% - 24px)',
     '&:focus': {
-      border: '1px solid #eee',
       backgroundColor: 'white',
     },    
   },
@@ -26,8 +25,11 @@ export default theme =>({
     fontSize: 18,
   },
   searchButton: {
+    color: 'red',
     backgroundColor: '#eee',
-    height: 43,
+    border: '1px solid #eee',
+    borderLeft: 'none',
+    height: 45,
     borderRadius: '0%',
     '&:hover':{
       backgroundColor: '#ec5252',

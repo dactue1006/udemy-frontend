@@ -10,14 +10,11 @@ import CloseIcon from '@material-ui/icons/Close';
 import Divider from '@material-ui/core/Divider';
 import { Link } from 'react-router-dom';
 import SignUpForm from './components/form/index';
+
 function getModalStyle() {
   return {
-    position: 'fixed',
+    marginTop: '3%',
     borderRadius: 5,
-    border: 'none',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
   };
 }
 
@@ -48,6 +45,7 @@ class SimpleModal extends React.Component {
           Sign Up
         </Button>
         <Modal
+          className={classes.root}
           aria-labelledby="simple-modal-title"
           aria-describedby="simple-modal-description"
           open={this.state.open}

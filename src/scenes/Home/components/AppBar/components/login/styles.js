@@ -1,4 +1,11 @@
 export default (theme) => ({
+  root: {
+    display: 'flex',
+    justifyContent: 'center',
+    maxWidth: '100%',
+    width: '100%',
+    overflow: 'auto',
+  },
   buttonLogin: {
     textTransform: 'none',
     borderRadius: 0,
