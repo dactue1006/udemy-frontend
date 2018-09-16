@@ -21,7 +21,6 @@ export default ()=>({
     '&:hover, &:focus': {
       backgroundColor: '#992337',
       color: 'white',
-      border: '1px solid #505763',
     }
   }
 })

@@ -1,11 +1,8 @@
 import React from 'react';
+import Slider from 'react-slick';
+import CardCourse from '../CardCourse/index';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import styles from './styles';
-import CardCourse from '../CardCourse/index';
-import Slider from 'react-slick';
 import { IconButton } from '@material-ui/core';
 import Next from 'Assets/images/next.png';
 import Prev from 'Assets/images/previous.png';
@@ -41,18 +38,19 @@ function SamplePrevArrow(props) {
   );
 }
 
-class CustomizedTabs extends React.Component {
-  state = {
-    value: 0,
-  };
+const styles = () =>({
+  root: {
+    borderRight: '1px solid #f7f8fa',
+    position: 'absolute',
+    left: 0,
+    right: 0,
+  }
 
-  handleChange = (event, value) => {
-    this.setState({ value });
-  };
+});
+class SimpleSlider extends React.Component {
 
   render() {
     const { classes } = this.props;
-    const { value } = this.state;
     let courses = [
       {
         imageLink: 'https://udemy-images.udemy.com/course/240x135/396876_cc92_7.jpg',
@@ -98,11 +96,65 @@ class CustomizedTabs extends React.Component {
         ratingNumber: 5042,
         oldPrice: '$199.9',
         newPrice: '$11.99',
-      }
+      },
+      {
+        imageLink: 'https://udemy-images.udemy.com/course/240x135/1350984_2355_6.jpg',
+        nameCourse: 'The Modern Python 3 Bootcamp',
+        author: 'Colt Steele',
+        rating: 4.7,
+        ratingNumber: 2398,
+        oldPrice: '$199.9',
+        newPrice: '$19.9',
+      },
+      {
+        imageLink: 'https://udemy-images.udemy.com/course/240x135/1151632_de9b.jpg',
+        nameCourse: 'Deep Learning A-Z™: Hands-On Artificial Neural...',
+        author: 'Kirill Eremenko Hadelin...',
+        rating: 4.7,
+        ratingNumber: 13345,
+        oldPrice: '$199.9',
+        newPrice: '$11.99',
+      },
+      {
+        imageLink: 'https://udemy-images.udemy.com/course/240x135/903378_f32d_5.jpg',
+        nameCourse: 'The Python Bible™ | Everything You Need to program in python',
+        author: 'Ziyad Yehia',
+        rating: 4.6,
+        ratingNumber: 1800,
+        oldPrice: '$199.9',
+        newPrice: '$19.9',
+      },
+      {
+        imageLink: 'https://udemy-images.udemy.com/course/240x135/1350984_2355_6.jpg',
+        nameCourse: 'The Modern Python 3 Bootcamp',
+        author: 'Colt Steele',
+        rating: 4.7,
+        ratingNumber: 2398,
+        oldPrice: '$199.9',
+        newPrice: '$19.9',
+      },
+      {
+        imageLink: 'https://udemy-images.udemy.com/course/240x135/1151632_de9b.jpg',
+        nameCourse: 'Deep Learning A-Z™: Hands-On Artificial Neural...',
+        author: 'Kirill Eremenko Hadelin...',
+        rating: 4.7,
+        ratingNumber: 13345,
+        oldPrice: '$199.9',
+        newPrice: '$11.99',
+      },
+      {
+        imageLink: 'https://udemy-images.udemy.com/course/240x135/793796_0e89.jpg',
+        nameCourse: 'Microsoft Excel - Excel from Beginner to...',
+        author: 'Kyle Pew',
+        rating: 4.7,
+        ratingNumber: 5042,
+        oldPrice: '$199.9',
+        newPrice: '$11.99',
+      },
     ]
     let renderCourse = courses.map( (course, index)=>{
       return (
-        <CardCourse 
+        <CardCourse
           key={index}
           imageLink={course.imageLink}
           nameCourse={course.nameCourse}
@@ -111,49 +163,57 @@ class CustomizedTabs extends React.Component {
           ratingNumber={course.ratingNumber}
           oldPrice={course.oldPrice}
           newPrice={course.newPrice}
-        >
-        </CardCourse>
-      )
-    })
-    let topics = [ 'Development', 'Design', 'Business', 'IT & Software', 'Personal development', 'Marketing', 'Photography'];
-    let tabTopic = topics.map( (obj, index)=>{
-      return (
-        <Tab 
-          key={index}
-          disableRipple
-          classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
-          label={<span className={classes.tabLabel}>{obj}</span>}
-        />
+        /> 
+
       )
     })
     var settings = {
       dots: false,
       infinite: false,
       speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 3,
+      slidesToShow: 5,
+      slidesToScroll: 5,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />,
-    }
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4,
+          }
+        },
+        {
+          breakpoint: 1000,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    };
     return (
-      <div className={classes.root}>
-        <Tabs
-          value={value}
-          onChange={this.handleChange}
-          classes={{ root: classes.tabsRoot, indicator: classes.tabsIndicator }}
-        >
-          {tabTopic}
-        </Tabs>
-        <Slider {...settings}>
-          {renderCourse}
-        </Slider>
-      </div>
+
+      <Slider {...settings}>
+        {renderCourse}
+      </Slider>
+
     );
   }
 }
 
-CustomizedTabs.propTypes = {
+SimpleSlider.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(CustomizedTabs);
+export default withStyles(styles)(SimpleSlider);

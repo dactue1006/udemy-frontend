@@ -7,7 +7,7 @@ export default (theme) => ({
     width: 'auto',
     borderRadius: 2,
     padding: theme.spacing.unit * 2,
-    backgroundColor: 'whithfryttehetethtee',
+    backgroundColor: 'white',
     boxShadow: '0px 0px 2px 0px rgba(0,0,0,0.75)',
     '&:hover': {
       boxShadow: '0px 0px 4px 0px rgba(0,0,0,0.75)',
