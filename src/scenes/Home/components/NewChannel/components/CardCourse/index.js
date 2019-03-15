@@ -5,11 +5,10 @@ import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import { Rating } from 'semantic-ui-react';
+import Rating from 'react-rating'
 import styles from './styles';
 import Popper from '@material-ui/core/Popper';
 import Fade from '@material-ui/core/Fade';
-import Paper from '@material-ui/core/Paper';
 import CardDescription from '../CardCourse/components/CardDescription/index';
 
 class RecipeReviewCard extends React.Component {
@@ -50,7 +49,14 @@ class RecipeReviewCard extends React.Component {
               {this.props.author}
             </Typography>
             <div style={{marginBottom: 10}}>
-              <Rating defaultRating={4.8} maxRating={5} disabled icon='star' size='mini' />
+              <Rating
+                placeholderRating={this.props.rating}
+                readonly
+                emptySymbol={<img src={require('./images/star-grey.png')} className="icon" />}
+                placeholderSymbol={<img src={require('./images/star-yellow.png')} className="icon" />}
+                fullSymbol={<img src={require('./images/star-yellow.png')} className="icon" />}
+
+              />
               <Typography style={{display: 'inline'}}>{this.props.rating} ({this.props.ratingNumber})</Typography>
             </div>
             <Typography style={{textAlign: 'right'}}>

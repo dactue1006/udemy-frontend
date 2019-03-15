@@ -1,4 +1,4 @@
-import bgNoticeBanner from 'Assets/images/notice_banner.png.jpg';
+import bgNoticeBanner from './images/notice_banner.png.jpg';
 export default theme =>({
   root: {
     position: 'relative',
@@ -17,7 +17,7 @@ export default theme =>({
   content: {
     position: 'relative',
     width: '60%',
-    padding: '150px 10%',
+    padding: '130px 10%',
   },
   howItWork: {
     background: 'linear-gradient(-45deg,#ec5252,#6e1a52)',

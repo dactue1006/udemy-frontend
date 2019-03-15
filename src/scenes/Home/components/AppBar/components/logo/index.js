@@ -1,6 +1,6 @@
 import React from 'react';
 import { ListItem, withStyles } from '@material-ui/core';
-import logo from 'Assets/images/logo.png';
+import logo from './images/logo.png';
 import { Link } from 'react-router-dom';
 import styles from './styles';
 import PropTypes from 'prop-types';

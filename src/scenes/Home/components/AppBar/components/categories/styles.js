@@ -1,8 +1,19 @@
-export default () => ({
-  root: {
-    backgroundColor: 'white',
-    color: '#505763',
-    padding: 10,
-    margin: 10
+export default (theme) => ({
+  button: {
+    textTransform: 'capitalize',
+    '&:hover': {
+      background: 'transparent',
+    }
   },
+  leftIcon: {
+    marginRight: theme.spacing.unit,
+  },
+  rightIcon: {
+    margin: 0,
+    float: 'right',
+  },
+  menuItem: {
+    width: 270,
+    padding: '8px 16px',
+  }
 })
